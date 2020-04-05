@@ -15,4 +15,12 @@ describe Player do
       expect(dave.hp).to eq Player::DEFAULT_HP
     end
   end
+
+  describe '#attack' do
+    it 'damages the oponent' do
+      expect(mittens).to receive(:receive_attack)
+      dave.attack(mittens)
+    end
+  end
+
 end
