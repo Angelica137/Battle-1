@@ -1,10 +1,18 @@
 require 'sinatra/base'
 
 class Battle < Sinatra::Base
+  
   get '/' do
-    'Testing infrastructure working!'
-    #on landing the users should be able
-    #to input their names
+    'Enter player names'
+    erb :index
+  end
+
+  post '/names' do
+#    'Welcome! Let\'s do battle!'
+    @player_1_name = params[:player_1_name]
+    @player_2_name = params[:player_2_name]
+    erb :play
+
   end
 
   run! if app_file == $0
