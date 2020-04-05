@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'player'
 
 class Battle < Sinatra::Base
   enable :sessions
@@ -24,6 +25,6 @@ class Battle < Sinatra::Base
     @player_2_name = session[:player_2_name]
     erb :attack
   end
-  
+
   run! if app_file == $0
 end
