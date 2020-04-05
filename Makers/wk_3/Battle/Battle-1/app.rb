@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class Battle < Sinatra::Base
   get '/' do
-    'Hello Battle!'
+    'Testing infrastructure working!'
     #on landing the users should be able
     #to input their names
   end
