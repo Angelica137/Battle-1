@@ -9,6 +9,6 @@ feature 'Attack oponent' do
   scenario 'Player 1 attacks Player 2 and sees confirmation' do
     sign_in_and_play
     click_button 'Attack'
-    expect(page).to have_content 'You attacked Mittens'
+    expect(page).to have_content 'You attacked Mittens!'
   end
 end
