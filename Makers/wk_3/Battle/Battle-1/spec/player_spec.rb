@@ -23,4 +23,10 @@ describe Player do
     end
   end
 
+  describe '#receive_attack' do
+    it 'reduces the player hp' do
+      expect { dave.receive_attack }.to change { dave.hp }.by(-10)
+    end
+  end
+
 end
