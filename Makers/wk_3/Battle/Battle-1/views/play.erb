@@ -3,8 +3,7 @@
 <%= @game.player_1.name %> vs. <%= @game.player_2.name %>
 <p><%= @game.player_2.name %>: <%= @game.player_2.hp %>HP</p>
 
-<label for="player_1_name">
-  Player 1, attack!
+<p><%= @game.player_1.name %>, attack!</p>
 </label>
 <form action="/attack">
   <input type="submit" value="Attack">
