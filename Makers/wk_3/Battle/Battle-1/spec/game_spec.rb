@@ -24,8 +24,15 @@ describe Game do
   end
 
   describe '#turn' do
-  it 'displays Player_1s turn at start of game' do
-    expect(game.turn).to eq player_1
+    it 'displays Player_1s turn at start of game' do
+      expect(game.turn).to eq player_1
+    end
+  end
+
+  describe '#switch_turns' do
+  it 'displays Players_2 after P1 attacks' do
+    game.switch_turns
+    expect(game.turn).to eq player_2
   end
 end
   

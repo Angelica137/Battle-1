@@ -13,4 +13,8 @@ class Game
     player.receive_attack
   end
 
+  def switch_turns
+    turn = opponent_of(turn)
+  end
+
 end
