@@ -9,7 +9,7 @@ feature 'current_turn' do
     click_button 'Attack'
     click_button 'OK'
     expect(page).not_to have_content "Dave, attack!"
-    expect(page).to have_content "Mittens, go!"
+    expect(page).to have_content "Mittens, attack!"
   end
 
 end
