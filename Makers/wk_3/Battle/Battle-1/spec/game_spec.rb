@@ -22,4 +22,11 @@ describe Game do
       expect(game.player_2).to eq player_2
     end
   end
+
+  describe '#turn' do
+  it 'displays Player_1s turn at start of game' do
+    expect(game.turn).to eq player_1
+  end
+end
+  
 end
