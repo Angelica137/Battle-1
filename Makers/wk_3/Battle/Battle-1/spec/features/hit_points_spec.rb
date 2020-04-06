@@ -16,10 +16,16 @@ feature 'Attacking reduces oponents HP' do
     expect(page).to have_content 'Mittens: 50HP'
   end
 
-  feature 'Users can see their HP' do
-    scenario 'While playeing users can see their HP' do
+  feature 'Player_1 can see their HP' do
+    scenario 'While playing Player_1 can see their HP' do
       sign_in_and_play
-      expect(page).to have_content 'Dave: 60HP. Mittens: 60HP'
+      expect(page).to have_content 'Dave: 60HP'
+    end
+  end
+  feature 'Player_2 can see their HP' do
+    scenario 'While playing Player_1 can see their HP' do
+      sign_in_and_play
+      expect(page).to have_content 'Mittens: 60HP'
     end
   end
 end

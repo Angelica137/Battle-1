@@ -11,5 +11,4 @@ feature 'current_turn' do
     expect(page).not_to have_content "Dave, attack!"
     expect(page).to have_content "Mittens, attack!"
   end
-
 end
