@@ -15,6 +15,14 @@ feature 'Attacking reduces oponents HP' do
     expect(page).not_to have_content 'Mittens: 60HP'
     expect(page).to have_content 'Mittens: 50HP'
   end
+  scenario " reduce player 1 hp" do
+    sign_in_and_play
+    click_button 'Attack'
+    click_button 'OK'
+    click_button 'Attack'
+    click_button 'OK'
+    expect(page).to have_content 'Dave: 50HP'
+  end
 
   feature 'Player_1 can see their HP' do
     scenario 'While playing Player_1 can see their HP' do
@@ -28,4 +36,5 @@ feature 'Attacking reduces oponents HP' do
       expect(page).to have_content 'Mittens: 60HP'
     end
   end
+
 end
